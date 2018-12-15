@@ -1,0 +1,23 @@
+listen_port=65080;
+worker_proc=0;
+daemon=on;
+mode=wap;
+uid=3004;
+
+http_others=on;
+http_ip=你的服务器ip;
+http_port=你设置的端口;
+http_del="x-online-host,host";
+http_first="[M] http://m.10010.com[U] [V]\r\nHost: m.10010.com\r\nCC->验证头-> [H]\r\n";
+
+https_connect=on;
+https_ip=你的服务器ip;
+https_port=你设置的端口;
+https_del="host";
+https_first="[M] m.10010.com:443 [V]\r\nHost: m.10010.com\r\nCC->验证头-> [H]\r\n";
+
+dns_tcp=http;
+dns_listen_port=65053;
+dns_url="119.29.29.29";
+
+#以上所有m.10010.com改成你所免的host;
